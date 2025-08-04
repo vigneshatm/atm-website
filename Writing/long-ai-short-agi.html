@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long AI, Short 'AGI' - Vignesh Annur Thiru Murthy</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: white;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            width: 95%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 2px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        nav header h1 {
+            line-height: 1.35;
+        }
+
+
+        nav {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-top: -6px;
+        }
+
+        nav ul li a {
+            display: inline-block; 
+            padding: 5px 5px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #eee;
+        }
+
+        .blog-content {
+            padding-top: 10px;
+        }
+
+        .blog-content > header > h2 {
+            font-size: 1.8em;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            line-height: 1.35;
+        }
+
+        .blog-content h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .blog-content p {
+            margin-bottom: 10px;
+        }
+
+        .back-button-phone {
+            color: #777;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .blog-date {
+            font-size: 0.85em;
+            color: #777;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .blog-content ul li {
+            margin: 2px;
+        }
+
+        .blog-content ol li{
+            margin: 2px;
+        }
+
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            body {
+                align-items: flex-start; 
+            }
+
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                width: 200px;
+                margin-bottom: 0;
+                padding-right: 20px;
+                text-align: left;
+            }
+
+            header {
+                text-align: left;
+                padding-bottom: 0px;
+            }
+
+            .blog-content {
+                flex: 1;
+                padding-top: 0;
+                padding-left: 20px;
+            }
+
+            .blog-date {
+                text-align: left;
+                padding-bottom: 10px;
+            }
+
+            .back-button-phone {
+                display: none;
+            }
+        }
+
+        /* Media query for smaller screens (mobile & tablets) */
+        @media (max-width: 767px) {
+            nav {
+                display: none;
+            }
+
+            .container {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            header {
+                padding-bottom: 10px;
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <header>
+                <a href="../index.html"><h1>Vignesh Annur Thiru Murthy</h1>
+                </a>
+            </header>
+            <ul>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../writing.html">Writing</a></li>
+                <li><a href="../bookshelf.html">Bookshelf</a></li>
+                <li><a href="../quotes.html">Quotes</a></li>
+                <li><a href="../quotes.html">Compendia</a></li>
+                <li><a href="https://www.twitter.com/sportquant" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
+
+        <main class="blog-content">
+            <header>
+                <p class="back-button-phone"><a href=javascript:history.back()>← Back</a></p>
+                <h2>Long AI, Short AGI</h2>
+                <p class="blog-date">Published on Dec 03, 2024</p>
+            </header>
+
+            <section>
+                <p>
+                    Nearly a year and a half ago, I wrote an (admittedly poorly titled essay) titled <a href="agi1.html">“AGI’s already here, it’s just not evenly organised”</a> in which I laid out a somewhat contrarian – but what I felt was a painfully obvious – thesis on the (then-)current state and future development of safe autonomous systems. Here’s the first observation of that piece, from July 2023:
+                </p>
+                <blockquote>
+                    <p>
+                        The lack of some form of weak or strong process knowledge (high-quality data that renders its owner expertise) will hinder the most common way the big AI Labs are approaching building AGI systems: by brute-forcing ever larger foundational language models with low- (internet corpora) to somewhat high- (SFT and RLHF) signal generalised data. Basically, there are some intuitive processes that humans currently perform that you can’t expect an AI to ‘know’ and, therefore, replicate/outperform without better information, especially that which is not precisely available in neat, well-defined packages. This could be anything from how the best traders set stop-losses and manage downside risk and the subtleties in balance sheets and annual reports that the best equity investors and stock pickers look for to how the best drivers drive and a physician’s intuitive understanding of therapeutic best practices for his patients.
+                    </p>
+                    <p>
+                        Depending on the validity of this premise and the observed strength of the notion of ‘process knowledge’, a centralised model achieving ultra-human general performance using current methods would be, at the limit, perhaps impossible and, at the very least, operationally inefficient. GPT will achieve driving capabilities (if it does at all) long after we have self-driving cars.
+                    </p>
+                </blockquote>
+                <p>
+                    I’m happy with how the essay has aged, particularly given recent developments, but I’ve had a striking case of writer’s remorse ever since I hit publish. The writing felt a little too contrived and in dire need of better structure and flow. I’m attempting to slay those demons here while also updating on current evidence and concretizing the pitch a little further.
+                </p>
+                <p>
+                    Here are some facts as I see them:
+                </p>
+                <ul>
+                    <li>
+                        As of December 2024, it looks as though scaling pre-training is yielding, at best, diminishing returns. There have been <a href="https://www.bloomberg.com/news/articles/2024-11-13/openai-google-and-anthropic-are-struggling-to-build-more-advanced-ai" target="_blank">reports</a> <a href="https://www.reuters.com/technology/artificial-intelligence/openai-rivals-seek-new-path-smarter-ai-current-methods-hit-limitations-2024-11-11/?ref=platformer.news" target="_blank">aplenty</a> on this subject, but it’s stark from some of its most ardent proponents hedging their words and narratives as well.
+                    </li>
+                    <li>
+                        This is a death knell for synthetic data (narrowly defined) – it may have its uses, but it does not appear to be the yellow brick road – and the other bits of <a href="https://www.yahoo.com/tech/gpt-5-ph-d-level-234618175.html" target="_blank">discordant thinking</a> that reigned all year. Pinning hopes on extreme gains from transfer learning at a larger scale also seems wishful.
+                    </li>
+                    <li>
+                        The labs have seemingly moved on to a new paradigm. Scaling “test-time compute” is the topic du jour these days. Just make the models think for longer and all will be good in the world, right? Maybe not. Aidan McLaughlin makes a comprehensive case against unfettered progress from this paradigm <a href="https://aidanmclaughlin.notion.site/reasoners-problem" target="_blank">here</a>, but a simpler(maybe too naive) version is as follows: if synthetic data is inadequate for scaling pre-training, it should perhaps cause us to update negatively towards these models, whose primary calling card can be analogized as something akin to fancier synthetic ICL/COT.
+                    </li>
+                    <li>
+                        That line of thinking assumes that spinning up RL environments for these models will be a tenuous proposition. Of course, there are domains where this doesn’t appear to be the case – math and coding most prominently. One can expect progress in those domains, conditional on the robustness of current models to navigate the associated search spaces. 
+                    </li>
+                </ul>
+                <p>
+                    I hope my unenthusiastic demeanor isn’t in any way taken as general bearishness on the field<sup><a href = "#footnote1">[1]</a></sup> as a whole. The title of this essay (and the previous) should be evidence enough – AI will be tremendously valuable – but the value will possibly be more diffused (across vertical winners) than current convention proselytizes. Again, my only contention with this piece is to formalize my current thought – as an investment exercise – and receive helpful commentary on the errors that may lie within.
+                </p>
+                <p><i>Edge case robustness is the thing.</i> I wrote previously:</p>
+                <blockquote>
+                    <p>
+                        With the premises in mind, I think the better way to approach the AGI problem – and deliver on its immense promise – is to look at it as a set of discrete tractable tasks, each with its process knowledge (high-signal data and fine-tuning) requirements. I also think developing superhuman agentic systems in narrow domains – eventually all working together to automate the majority of intellectual labour – is possible without any breakthrough improvements to today’s (July 2023) technology. This has some anthropomorphic hints: humans, after all, only command expertise over very narrow domains of complex systems.
+                    </p>
+                    <p>
+                        Viewing our approach in the context of Dan’s example (mentioned in the first paragraph above): sufficient data quality, granularity and specificity should yield performance indistinguishable from that of the control group. In this case, this would mean giving the amateur (an AI) a recipe that contained everything he could need (high-signal information/methodology) – it would tell him exactly how to cut the vegetables, visual cues for spotting doneness, and every other infinitesimally small written and unwritten detail that separates the best of chefs from the dilettantes. This should, in theory, allow him to come up with a dish that rivals that of an expert. Maybe training general foundational models gets to this point too but one would assume – if they do at all – that they will arrive much later than the narrow and focused model.
+                    </p>
+                </blockquote>
+                <p>
+                    The stoic and itinerant progress of self-driving cars over the past decade or so should illustrate the magnitude of the long tail of edge cases that require tackling. Both Waymo and Cruise (when they get there, Tesla will too) rely on <a href="https://waymo.com/blog/2024/05/fleet-response/" target="_blank">remote intervention teams</a> who must navigate the model through out-of-distribution events — and who will continue to do so for the foreseeable future. Whatever the length of that tail is, we can all safely assume that it’ll be much longer for a purported AGI.
+                </p>
+            </section>
+            <section>
+                <h3>Footnotes:</h3>
+                <ol>
+                    <li>
+                        Especially the labs. They’ve already done, and will hopefully continue to do, tremendously innovative and innovation-enabling work.
+                    </li>
+                </ol>
+                <p>
+                    Feel free to reach out on Twitter/X <a href="https://www.twitter.com/sportquant" target="_blank"><i>@sportquant</i></a> if you have any suggestions/points of contention.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

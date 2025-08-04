@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf - Vignesh Annur Thiru Murthy</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: white;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            width: 95%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 2px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        nav header h1 {
+            line-height: 1.35;
+        }
+
+
+        nav {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-top: -6px;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 5px 5px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #eee;
+        }
+
+        .blog-content {
+            padding-top: 10px;
+        }
+
+        .blog-content > header > h2 {
+            font-size: 1.8em;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            line-height: 1.35;
+        }
+
+        .blog-content h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .blog-content h3 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        .blog-content p {
+            margin-bottom: 10px;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .back-button-phone {
+            color: #777;
+        }
+
+        .blog-date {
+            font-size: 0.85em;
+            color: #777;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .blog-content ul li {
+            margin: 2px;
+        }
+
+        .blog-content ol li{
+            margin: 2px;
+        }
+
+        .tabs-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 8px; 
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: flex-start; 
+        }
+
+        .tab-button {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px; 
+            background-color: transparent; 
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            white-space: nowrap; 
+        }
+
+        .tab-button:hover {
+            background-color: #eee;
+            border-color: #ccc;
+        }
+
+        .tab-button.active {
+            background-color: #333;
+            color: white;
+            border-color: #333;
+        }
+
+        .books-list {
+            margin-top: 20px;
+        }
+
+        .book-item {
+            margin-bottom: 5px;
+            padding: 5px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .book-item:last-child {
+            border-bottom: none;
+        }
+
+        .book-item strong {
+            display: block;
+            font-size: 1.05em;
+            padding-bottom: 1px;
+        }
+
+        .book-item em {
+            font-size: 0.95em;
+            color: #333;
+        }
+
+        .book-item div{
+            font-size: 0.95em;
+            padding-top: 2px;   
+            padding-bottom: 5px;
+            color: #555;
+        }
+
+
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            body {
+                align-items: flex-start; 
+            }
+
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                width: 200px;
+                margin-bottom: 0;
+                padding-right: 20px;
+                text-align: left;
+            }
+
+            header {
+                text-align: left;
+                padding-bottom: 0px;
+            }
+
+            .blog-content {
+                flex: 1;
+                padding-top: 0;
+                padding-left: 20px;
+            }
+            
+            .back-button-phone {
+                display: none;
+            }
+
+            .blog-date {
+                text-align: left;
+                padding-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                display: none;
+            }
+
+            .container {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            header {
+                padding-bottom: 10px;
+                padding-top: 15px;
+            }
+
+            .tabs-container {
+                justify-content: center; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <header>
+                <a href="index.html"><h1>Vignesh Annur Thiru Murthy</h1>
+                </a>
+            </header>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="bookshelf.html">Bookshelf</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="compendia.html">Compendia</a></li>
+                <li><a href="https://www.twitter.com/sportquant" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
+
+        <main class="blog-content">
+            <header>
+                <p class="back-button-phone"><a href=javascript:history.back()>← Back</a></p>
+                <h2>Bookshelf</h2>
+                <p class="blog-date">Last updated Jul 14, 2025</p>
+            </header>
+            <section>
+                <p>
+                    A frequently updated list of books that I think are entertaining and/or handy. I also compile a list of other (mostly) written content that I find interesting <a href="Compendia/good-links.html">here</a>. Personal favorites have their own tab. Inspired by <a href="https://patrickcollison.com/bookshelf" target="_blank">Patrick Collison's Bookshelf</a>.
+                </p>
+            </section>
+            <!-- Tab Navigation Section -->
+            <div class="tabs-container" id="tabs-container">
+            </div>
+
+            <!-- Books List Section -->
+            <div id="books-list" class="books-list">
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const booksData = [
+            { title: "More Money Than God: Hedge Funds and the Making of a New Elite", author: "Sebastian Mallaby.", notes: "History of Hedge Funds and associated personas.", genre: ["Finance", "Business", "Biographies", "Favorites"] },
+            { title: "Alex Ferguson: My Autobiography", author: "Sir Alex Ferguson.", notes: "Self-explanatory.", genre: ["Biographies", "Sport", "Favorites"] },
+            { title: "Leading: Learning from Life and My Years At Manchester United", author: "Sir Alex Ferguson and Sir Michael Moritz.", notes: `<a href="https://marginalrevolution.com/marginalrevolution/2021/08/what-ive-been-reading-198.html" target="_blank">Tyler Cowen recommends</a>, as do I.`, genre: ["Biographies", "Sport", "Favorites"]},
+            { title: "Wayne Rooney: My Decade in the Premier League", author: "Wayne Rooney.", notes:"First biography of a soccer player I read. Still one of the best.", genre: ["Biographies", "Sport", "Favorites"] },
+            { title: "Hitchcock", author: "Francois Truffaut, Helen G. Scott.", notes: "Alfred Hitchcock and Francois Truffaut talk about cinema, cinematic history, Hitchcock’s life and, to a much lesser extent (regrettably), suspense.", genre: ["Biographies"] },
+            { title: "Dawn of the New Everything: Encounters with Reality and Virtual Reality", author: "Jaron Lanier.", notes: "Jaron Lanier Memoir. Highly recommend. Especially great tales of Silicon Valley/Popular Tech in the ’80s.", genre: ["Biographies", "Favorites"] }, 
+            { title: "The History of the Future: Oculus, Facebook, and the Revolution That Swept Virtual Reality", author: "Blake J. Harris.", notes: "Breezy read of the founding of Oculus.", genre: ["Biographies", "Business", "Favorites"]}, 
+            { title: "Man’s Search for Meaning", author:"Viktor E. Frankl.", notes: "Tales and psychological lessons from a person who lived the Holocaust.", genre: ["Biographies", "History", "Favorites"] }, 
+            { title: "The Man from the Future: The Visionary Life of John von Neumann", author: "Ananyo Bhattacharya.", notes: "John Von Neumann biography for a popular audience that doesn’t entirely skimp on the science.", genre: ["Biographies", "PopSci", "Favorites"] }, 
+            { title: "Richer, Wiser, Happier: How the World’s Greatest Investors Win in Markets and Life", author: "William Green.", notes: "Stories of some great value/quality investors.", genre: ["Biographies", "Finance", "Business", "Favorites"] }, 
+            { title: "Shoe Dog: A Memoir by the Creator of Nike", author: "Phil Knight.", notes: "Phil Knight Autobiography.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "The Ride of a Lifetime: Lessons Learned from 15 years as CEO of the Walt Disney Company", author: "Robert Iger.", notes: "Autobiography. Really fun.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "When Genius Failed: The Rise and Fall of Long-Term Capital Management", author: "Roger Lowenstein.", notes: "Self-explanatory.", genre: ["Biographies", "Business", "Finance", "Favorites"] }, 
+            { title: "Going Infinite: The Rise and Fall of a New Tycoon", author: "Michael Lewis.", notes: "Michael Lewis’ book on the SBF kerfuffle.", genre: ["Biographies", "Business", "Finance"] }, 
+            { title: "Sam Walton: Made in America", author: "Sam Walton, John Huey.", notes: "Autobiography.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley", author: "Antonio García Martínez.", notes: "A more sardonic Liar’s Poker set in Silicon Valley.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "The Fund: Ray Dalio, Bridgewater Associates, and the Unraveling of a Wall Street Legend", author: "Rob Copeland.", notes: "Self-explanatory.", genre: ["Finance", "Business"] }, 
+            { title: "Who is Michael Ovitz?", author: "Michael Ovitz.", notes: "Author’s memoir.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "Trillion Dollar Triage: How Jay Powell and the Fed Battled a President and a Pandemic — and prevented Economic Disaster", author: "Nick Timiraos.", notes: "The story of the Federal Reserve and its part in the early pandemic.", genre: ["Biographies", "Finance", "Economics", "Favorites"] }, 
+            { title: "The Power Law: Venture Capital and the Making of the New Future", author: "Sebastian Mallaby.", notes: "History of Venture Capital, and the Bay Area.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race", author: "Walter Isaacson.", genre: ["Biographies", "PopSci", "Biology", "Favorites"] }, 
+            { title: "The Contrarian: Peter Thiel and Silicon Valley’s Pursuit of Power", author: "Max Chafkin.", notes: "Thiel biography that offers a lot of color into the culture wars of the 2010s.", genre: ["Biographies", "Business"] }, 
+            { title: "CHAOS: Charles Manson, the CIA, and the Secret History of the Sixties", author: "Tom O’Neill", notes: "Highly recommend, if just as a portrait of research tedium.", genre: ["Biographies", "Favorites"] }, 
+            { title: "Unit X: How the Pentagon and Silicon Valley Are Transforming the Future of War", author: "Raj M. Shah, Christopher Kirchhoff", notes: "Highly recommend.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "Number Go Up", author: "Zeke Faux.", notes: "Crypto excesses in the Everything Bubble.", genre: ["Biographies", "Business", "Finance", "Favorites"] }, 
+            { title: "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration", author: "Ed Catmull, Amy Wallace.", notes: "On Pixar and management practices that nurture creativity by the studio’s founder. Really good book on management.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "Paper Belt on Fire: How Renegade Investors Sparked a Revolt Against the University", author: "Michael Gibson.", genre: ["Biographies", "Business", "Favorites"] }, 
+            { title: "Net Gains: Inside the Beautiful Game’s Analytics Revolution", author: "Ryan Hanlon.", notes: "Details the intellectual origins of Soccer’s analytics takeover.", genre: ["Sport", "Favorites", "Biographies"] }, 
+            { title: "The Misbehavior of Markets: A Fractal View of Financial Turbulence", author: "Benoit Mandelbrot and Richard L. Hudson.", notes: "Explains, expands and refutes a lot of the early theories of financial markets and price action.", genre: ["Finance", "Favorites"] }, 
+            { title: "What works on Wall Street", author: "James O’Shaughnessy.", notes: "Textbook(?) primary focused on factor investing.", genre: ["Finance", "Textbooks", "Favorites"] }, 
+            { title: "The Psychology of Money: Timeless lessons on wealth, greed, and happiness", author: "Morgan Housel.", notes: "One of the best personal finance books there is.", genre: ["Finance", "Favorites"] }, 
+            { title: "The Richest Man in Babylon", author: "George Samuel Clason.", notes: "Personal finance parable(s).", genre: ["Finance", "Fiction"] }, 
+            { title: "Investing for Growth: How to make money by only buying the best companies in the world – An anthology of investment writing, 2010-20", author: "Terry Smith.", notes: "Terry Smith’s collected writings.", genre: ["Finance", "Favorites"] }, 
+            { title: "The Most Important Thing: Uncommon Sense for the Thoughtful Investor", author: "Howard Marks.", notes: "Marks’ musings on the psychology of market participants. Lays out simply the (ideal) behaviors and frameworks of the best long-term investors.", genre: ["Finance", "Favorites"] }, 
+            { title: "Liar's Poker", author: "Michael Lewis.", notes: "Wall Street, High Finance and Salomon Brothers in the ’80s.", genre: ["Biographies", "Finance", "Favorites"] },
+            { title: "Invent and Wander: The Collected Writings of Jeff Bezos, with an Introduction by Walter Isaacson.", author: "Jeff Bezos.", notes: "Self-explanatory. Awesome.", genre: ["Business", "Favorites"] },
+            { title: "The Cold Start Problem: How to Start and Scale Network Effects", author: "Andrew Chen.", notes: "Practical introduction to network effects and Startup strategy. Highly recommend.", genre: ["Business", "Favorites"] },
+            { title: "The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint For Success", author: "William N. Thorndike, Jr.", notes: "A legendary book worthy of its clout.", genre: ["Business", "Favorites"] },
+            { title: "Chip War: The Fight for the World’s Most Critical Technology", author: "Chris Miller.", notes: "History and the current state of the semiconductor industry.", genre: ["Business", "Favorites"] },
+            { title: `<a href="https://stevejobsarchive.com/book" target="_blank">Make Something Wonderful: Steve Jobs in his own words</a>`, author: "Steve Jobs.", notes: "One of my favorite books. Compendium of Jobs’ writings.", genre: ["Business", "Favorites"] },
+            { title: "Big Business: A Love Letter to an American Anti-Hero", author: "Tyler Cowen", genre: ["Economics"] },
+            { title: "Zero to One: Notes on Startups, or How to Build the Future", author: "Peter Thiel, Blake Masters.", notes: "Thiel’s notes for entrepreneurs.", genre: ["Business", "Favorites"]  },
+            { title: "Paying with Plastic: The Digital Revolution in Buying and Borrowing", author: "David S. Evans and Richard L. Schmalensee.", notes: "The history of the payments card industry.", genre: ["Business", "Finance"] },
+            { title: "The Anatomy of the Swipe: Making Money Move", author: "Ahmed Siddiqui.", genre: ["Finance", "Business"] },
+            { title: "Interchange Fees: The Economics and Regulation of What Merchants Pay for Cards", author: "David S. Evans.", notes: "Self-explanatory.", genre: ["Finance", "Business"] }, 
+            { title: "Talent: How to find Energizers, Creatives, and Winners Around the World", author: "Daniel Gross, Tyler Cowen.", notes: "Practical book on talent identification. Perhaps the best there is on the topic.", genre: ["Business", "Favorites"] },
+            { title: `<a href="https://www.evelexa.com/" target="_blank">Entrepreneur’s Guide to a Biotech Startup</a>`, author: "Peter Kolchinsky.", genre: ["Business", "Biology"] },
+            { title: "The Field Guide to Global Payments", author: "Sophia Goldberg.", genre: ["Finance", "Business", "Favorites"] },
+            { title: "Read Write Own: Building the Next Era of the Internet", author: "Chris Dixon.", notes: "Coherent theses on why and where crypto matters.", genre: ["Business", "Finance", "Favorites"] },
+            { title: "Ogilvy on Advertising", author: "David Ogilvy.", genre: ["Business"] },
+            { title: "7 Powers: The Foundations of Business Strategy", author: "Hamilton Helmer.", notes: "Highly recommend.", genre: ["Business", "Favorites"] },
+            { title: "Soccernomics: Why England Loses, Why Germany and Brazil Win, and Why the U.S., Japan, Australia, Turkey - and Even Iraq — Are Destined to Become the Kings of the World’s Most Popular Sport", author: "Simon Kuper and Stefan Szymanski.", notes: "On the economic and cultural underpinnings of European Football/Soccer.", genre: ["Sport", "Economics", "Favorites"] }, 
+            { title: "Thinking, Fast and Slow", author: "Daniel Kahneman.", genre:["Economics", "Favorites", "PopSci"] },
+            { title: "Basic Economics", author: "Thomas Sowell.", genre: ["Economics", "Favorites"] },
+            { title: "In This Economy?: How Money and Markets Really Work", author: "Kyla Scanlon.", genre:["Finance", "Economics"] },
+            { title: "Build, Baby, Build: The Science and Ethics of Housing Regulation", author: "Bryan Caplan, Ady Branzei.", genre:["Economics", "Favorites"] },
+            { title: "Open Borders: The Science and Ethics of Immigration", author: "Bryan Caplan, Zach Weinersmith.", genre:["Economics", "Favorites"] },
+            { title: "On the Edge: The Art of Risking Everything", author: "Nate Silver.", genre:["Economics"] },
+            { title: "Thinking in Systems: A Primer", author: "Donella Meadows.", notes: "Skimmable but trite. Just read a microeconomics textbook instead.", genre:["PopSci"] },
+            { title: "Abundance", author: "Ezra Klein, Derek Thompson.", genre:["Economics", "Biographies", "Favorites"] },
+            { title: "How to Win the Premier League: The Inside Story of Football’s Data Revolution", author: "Ian Graham.", genre: ["Sport", "Favorites", "PopSci"] },
+            { title: "Outlive: The Science and Art of Longevity", author: "Peter Attia, Bill Gifford.", notes: "Practical guide to longevity.", genre:["Favorites", "Biology", "PopSci"] },
+            { title: "Why We Die: The New Science of Aging and the Quest for Immortality", author: "Venki Ramakrishnan.", genre: ["Favorites", "Biology", "PopSci"] },
+            { title: "The Gene: An Intimate History", author: "Siddhartha Mukherjee.", genre:["Biology", "PopSci", "Favorites"] },
+            { title: "Who We Are and How We Got Here: Ancient DNA and the New Science of the Human Past", author: "David Reich.", genre:["PopSci", "History", "Favorites", "Biology"] },
+            { title: "The Emperor of All Maladies: A Biography of Cancer", author: "Siddhartha Mukherjee.", notes: "Highly recommend", genre:["PopSci", "Biology", "Favorites"] },  
+            { title: "Why We Sleep", author: "Matthew Walker.", genre: ["PopSci", "Biology", "Favorites"] },
+            { title: "The Feynman Lectures on Physics", author: "Richard Feynman.", notes: ["Self-explanatory."], genre: ["Textbooks", "Favorites"] },
+            { title: "Relentless: From Good to Great to Unstoppable", author: "Tim Grover.", notes: "Michael Jordan and Kobe Bryant’s personal trainer expands upon their psyche.", genre: ["Sport", "Miscellaneous"] },
+            { title: "Killers of the Flower Moon: The Osage Murders and the Birth of the FBI", author: "David Grann.", notes: "Self-explanatory.", genre: ["Biographies", "History", "Favorites"] },
+            { title: "Hiroshima", author: "John Hersey", notes: "Recounts, through real subjects, the immediate aftermath of Hiroshima.", genre: ["History"] },
+            { title: "Statistics Without Tears", author: "Derek Rowntree.", notes: "Highly recommend.", genre: ["PopSci", "Favorites"] },
+            { title: "When Reason Goes on Holiday: Philosophers in Politics", author: "Neven Sesardic.", notes: "Academics in Politics Gone Wrong.", genre: ["History"] },
+            { title: "The Lessons of History", author: "Will and Ariel Durant.", notes: "Details each of the many anthropological and sociological factors that weave history.", genre: ["History", "Favorites"] },
+            { title: "Nuclear War: A Scenario", author: "Annie Jacobsen.", notes: "Terrifying but not too plausible.", genre: ["Miscellaneous"] },
+            { title: "Ready Player One", author: "Ernest Cline.", notes: "Iconic VR sci-fi.", genre: ["Fiction", "Favorites"] },
+            { title: "Invincible Compendium Volumes 1-3", author: "Robert Kirkman, Cory Walker, Ryan Ottley.", notes: "Invincible - all 144 issues.", genre: ["Fiction"] },
+            { title: "The Three-Body Problem", author: "Cixin Liu.", notes: "Chinese Sci-Fi novel. The first of a trilogy. Intense and jarring.", genre: ["Fiction", "Favorites"] },
+            { title: "Siddhartha: An Indian Novel", author: "Hermann Hesse.", notes: "A tale of personal enlightenment set in early Buddhism.", genre: ["Fiction"] },
+            { title: "Flatland: A Romance of Many Dimensions", author: "Edwin Abbott Abbott.", notes: "Tales at different dimensionalities.", genre:["Fiction"] },
+            { title: "There is No Antimimetics Dshlinvhq", author: "qntm.", genre:["Fiction", "Miscellaneous"] },
+            { title: "Malgudi Days", author: "R.K. Narayan.", notes: "Short stories of life in post-independence India. Highly recommend.", genre:["Fiction", "Favorites"] },
+            { title: "The Price of Tomorrow: Why Deflation is the Key to an Abundant Future", author: "Jeff Booth.", notes: "Heretic and charged take on fiscal and monetary policy in a world of rapid technological growth.", genre:["Economics"] },
+            { title: "The World After Capital", author: "Albert Wenger.", notes: "Predictions and policy recommendations for an abundant future.", genre:["Economics"] },
+            { title: "Console Wars: Sega, Nintendo, and the Battle that Defined a Generation", author: "Blake J. Harris.", notes: "Highly recommend.", genre: ["Business", "Biographies", "Favorites"] },
+            { title: "Payments Systems in the U.S.: A Guide for the Payments Professional - Third Edition", author: "Carol Coye Benson, Scott Loftesness, Russ Jones.", notes: "Comprehensive introductory text to US Payments.", genre:["Finance", "Business", "Textbook"]}
+        ];
+
+        // Get unique genres from the booksData and add 'All Books'
+        function getUniqueGenres(books) {
+            const genres = new Set();
+            books.forEach(book => {
+                if (book.genre && Array.isArray(book.genre)) {
+                    book.genre.forEach(g => genres.add(g));
+                }
+            });
+            // Convert set to array and sort alphabetically, then prepend 'All Books'
+            return ['All Books', ...Array.from(genres).sort()];
+        }
+
+        // Function to display books based on selected genre
+        function displayBooks(genre) {
+            const booksListDiv = document.getElementById('books-list');
+            booksListDiv.innerHTML = ''; // Clear current books
+
+            let filteredBooks = [];
+            if (genre === 'All Books') {
+                filteredBooks = booksData;
+            } else {
+                // Filter books where the book's genre array includes the selected genre
+                filteredBooks = booksData.filter(book => book.genre && book.genre.includes(genre));
+            }
+
+            if (filteredBooks.length === 0) {
+                booksListDiv.innerHTML = '<p>No books found in this genre.</p>';
+                return;
+            }
+
+            // Create and append book elements
+            filteredBooks.forEach(book => {
+                const bookItem = document.createElement('div');
+                bookItem.classList.add('book-item');
+                bookItem.innerHTML = `
+                    <strong>${book.title}</strong>
+                    <em>${book.author}</em>
+                    ${book.notes ? `<div>${book.notes}</div>` : ''}
+                `;
+                booksListDiv.appendChild(bookItem);
+            });
+        }
+
+        // Function to create tab buttons
+        function createTabButtons() {
+            const tabsContainer = document.getElementById('tabs-container');
+            const genres = getUniqueGenres(booksData);
+
+            genres.forEach(genre => {
+                const button = document.createElement('button');
+                button.classList.add('tab-button');
+                button.textContent = genre;
+                button.setAttribute('data-genre', genre); // Custom attribute to store genre
+
+                // Add click event listener to each button
+                button.addEventListener('click', () => {
+                    // Remove 'active' class from all buttons
+                    document.querySelectorAll('.tab-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    // Add 'active' class to the clicked button
+                    button.classList.add('active');
+                    // Display books for the selected genre
+                    displayBooks(genre);
+                });
+                tabsContainer.appendChild(button);
+            });
+        }
+
+        // Initialize the page on load
+        window.onload = function() {
+            createTabButtons();
+            // Set 'All Books' as the default active tab and display its content
+            const allBooksButton = document.querySelector('.tab-button[data-genre="All Books"]');
+            if (allBooksButton) {
+                allBooksButton.click(); // Simulate a click to activate and display
+            } else {
+                // Fallback if 'All Books' button is not found (should not happen)
+                displayBooks('All Books');
+            }
+        };
+    </script>
+</body>
+</html>

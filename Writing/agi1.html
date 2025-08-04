@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGI's already here, it's just not evenly organized - Vignesh Annur Thiru Murthy</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: white;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            width: 95%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 2px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        nav header h1 {
+            line-height: 1.35;
+        }
+
+
+        nav {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-top: -6px;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 5px 5px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #eee;
+        }
+
+        .blog-content {
+            padding-top: 10px;
+        }
+
+        .blog-content > header > h2 {
+            font-size: 1.8em;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            line-height: 1.35;
+        }
+
+        .blog-content h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .back-button-phone {
+            color: #777;
+        }
+
+        .blog-content p {
+            margin-bottom: 10px;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .blog-date {
+            font-size: 0.85em;
+            color: #777;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .blog-content ul li {
+            margin: 2px;
+        }
+
+        .blog-content ol li{
+            margin: 2px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                align-items: flex-start; 
+            }
+
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                width: 200px;
+                margin-bottom: 0;
+                padding-right: 20px;
+                text-align: left;
+            }
+
+            header {
+                text-align: left;
+                padding-bottom: 0px;
+            }
+
+            .blog-content {
+                flex: 1;
+                padding-top: 0;
+                padding-left: 20px;
+            }
+
+            .blog-date {
+                text-align: left;
+                padding-bottom: 10px;
+            }
+
+            .back-button-phone {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                display: none;
+            }
+
+            .container {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            header {
+                padding-bottom: 10px;
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <header>
+                <a href="../index.html"><h1>Vignesh Annur Thiru Murthy</h1>
+                </a>
+            </header>
+            <ul>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../writing.html">Writing</a></li>
+                <li><a href="../bookshelf.html">Bookshelf</a></li>
+                <li><a href="../quotes.html">Quotes</a></li>
+                <li><a href="../quotes.html">Compendia</a></li>
+                <li><a href="https://www.twitter.com/sportquant" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
+
+        <main class="blog-content">
+            <header>
+                <p class="back-button-phone"><a href=javascript:history.back()>← Back</a></p>
+                <h2>AGI's already here, it's just not evenly organized</h2>
+                <p class="blog-date">Published on July 30, 2023</p>
+            </header>
+
+            <section>
+                <p>
+                    Knowledge work can be explained – fairly reductively – as labour that involves the usage of structured (trends, demographics, financials etc) and unstructured data (expertise, corroborated evidence, and new knowledge, all of which may or may not have been stored in plain text) to make decisions – or to help some other people make decisions. Virtually every job depicted as ‘knowledge work’ or ‘intellectual labour’ can be described this way, from the heads of enterprises to their lowliest analysts. Wikipedia puts it succinctly: <a href="https://en.wikipedia.org/wiki/Knowledge_worker" target="_blank"> “Knowledge workers are workers whose main capital is knowledge.“ </a>
+                </p>
+                <p>
+                    Language plays a crucial role in our species, not least because it is one of the primary modalities – perhaps the dominant modality – through which unstructured data is transmitted. The reasons 2022-and-beyond-class LLMs have garnered a lot of attention (hah!) boil down to the fact that they seem to, at the very least, be perfectly capable of acting like they perceive language in the same way as us. Are we next-token predictors too? I tend to err on the side of the negative but nonetheless, machines seem to <i>'understand’</i> language (well)! That’s huge.
+                </p>
+                <p>
+                    So, now what? A tempting observation to make – and it is one that a lot of people are making – would be to claim that <s>we’re all going to die</s> knowledge work will become increasingly automated. Perhaps the primary reason it wasn’t automated already is the machines’ inability to wrangle with the tools of language and, as a consequence, unstructured data. Those seem like valid points – and AI companies and laboratories are working towards making the automation of knowledge work, and more, a reality. The stated goal of OpenAI is to build Artificial General Intelligence (AGI), defined in the <a href="https://openai.com/charter/" target="_blank">OpenAI charter</a> as <i>“highly autonomous systems that outperform humans at most economically valuable work.”</i> Ilya Sutskever, Chief Scientist at OpenAI, recently <a href ="https://www.youtube.com/watch?v=xym5f0XYlSc" target="_blank">offered a somewhat less circuitous description</a>, <i>“AGI is a computer system which can automate the great majority of intellectual labour.”</i>
+                </p>
+                <p>
+                    Casting my aspirations on the moral nature of these efforts aside (broadly speaking, I believe that pursuing AI progress is very worth it), my wish for this essay is to expand upon how I think large-scale automation of intellectual labour will play out and why we might be closer than we think.
+                </p>
+                <p>
+                    In 2018, Dan Wang, Technology/China-US Industrial Policy Analyst at Gavekal Dragonomics, wrote an <a href="https://danwang.co/how-technology-grows/" target="_blank">oft-quoted essay</a> on the importance of <b>process knowledge</b>, which he describes as “what we can also refer to as tacit knowledge, know-how, technical experience. Process knowledge is the kind of knowledge that’s hard to write down as an instruction.” He then brings the point home with a clear example:
+                </p>
+                <blockquote>
+                    "You can give someone a well-equipped kitchen and an extraordinarily detailed recipe, but unless he already has some cooking experience, we shouldn’t expect him to prepare a great dish."
+                </blockquote>
+                <p>
+                    Though written with industrial policy in mind, I find the construct “process knowledge” useful when visualising and extrapolating current and future states of AGI<sup id="tag1"><a href = "#footnote1">[1]</a></sup> research. Consider the following two premises:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            The lack of some form of weak or strong process knowledge (high-quality data that renders its owner expertise) will hinder the most common way the big AI Labs are approaching building AGI systems: by brute-forcing ever larger foundational language models with low- (internet corpora) to somewhat high- (SFT and RLHF) signal generalised data. Basically, there are some intuitive processes that humans currently perform that you can’t expect an AI to ‘know’ and, therefore, replicate/outperform without better information, especially that which is not precisely available in neat, well-defined packages. This could be anything from how the best traders set stop-losses and manage downside risk and the subtleties in balance sheets and annual reports that the best equity investors and stock pickers look for to how the best drivers drive and a physician’s intuitive understanding of therapeutic best practices for his patients.
+                        </p>
+                        <p>
+                            Depending on the validity of this premise and the observed strength of the notion of ‘process knowledge’, a centralised model achieving ultra-human general performance using current methods would be, at the limit, perhaps impossible and, at the very least, operationally inefficient. GPT will achieve driving capabilities (if it does at all) long after we have self-driving cars.
+                        </p>
+                    </li>
+                    <li>
+                        Current foundational LLMs and/or LLMs of the very near future, incentivised and fine-tuned to purpose, already possess – or can be fine-tuned and gated to possess – the requisite linguistic, syllogistic, and, in general, reasoning capabilities for human-level performance (and, in some circumstances, beyond) across a decent variety of intellectual tasks. The most promising early use cases of this class of LLMs – across Customer Service and client-facing tools like Shopify’s Sidekick – more or less offer satisfactory evidence for the validity of this premise.
+                    </li>
+                </ul>
+                <p>
+                    With the premises in mind, I think the better way to approach the AGI problem – and deliver on its immense promise – is to look at it as a set of discrete tractable tasks, each with its process knowledge (high-signal data and fine-tuning) requirements. I also think developing superhuman agentic systems in narrow domains – eventually all working together to automate the majority of intellectual labour – is possible without any breakthrough improvements to today’s (July 2023) technology. As described above, this has some anthropomorphic hints: humans, after all, only command expertise over very narrow domains of complex systems. 
+                </p>
+                <p>
+                    Viewing our approach in the context of Dan’s example (mentioned in the first paragraph above): sufficient data quality, granularity and specificity should yield performance indistinguishable from that of the control group. In this case, this would mean giving the amateur (an AI) a recipe that contained everything he could need (high-signal information/methodology) – it would tell him exactly how to cut the vegetables, visual cues for spotting doneness, and every other infinitesimally small written and unwritten detail that separates the best of chefs from the dilettantes. This should, in theory, allow him to come up with a dish that rivals that of an expert. Maybe training general foundational models gets to this point too but one would assume – if they do at all – that they will arrive much later than the narrow and focused model.
+                </p>
+                <p>
+                    Note that I don’t mean we should attempt to hard-code human intuitions and processes into these machines. Focus allows for unique processes, better data, and devoted computing specific to solving domain-specific problems. AlphaFold, GPT-4, and AlphaZero all have unique architectural characteristics that enable superhuman performance in verticals. 
+                </p>
+                <p>
+                    There’s an added benefit to approaching individual intellectual domains in isolation: solving related subsequent domains are easier. An AI that’s an expert equities investor will also possess characteristics that can help it be a stellar bond analyst or a management consultant. An AI that can write beautiful software will also have abilities that can help in chip design.
+                </p>
+                <p>
+                    This, in my opinion, is the path to delivering AGI’s promise.
+                </p>
+                <p>
+                    Surprisingly, there are few efforts to build practical systems that can automate the most highly valued intellectual labour. The major AI labs are focused on developing some form of generalized super-intelligence, while startups focus on highly linguistic but far less socially valuable tasks like copywriting and summarization. Large incumbents who could benefit from increased automation are reluctant to commit resources to the task. They are hindered by, amongst other things, a lack of research and technical talent, innovator’s dilemma and institutional drudgery, and a general apathy towards automation which, admittedly, has its risks but is worth pursuing nonetheless. They are not early adopters anyway.
+                </p>
+                <p>
+                    I fear that (admitting that the possibility is minuscule) AI’s promise may not be realized, simply because we’ve overlooked practical solutions in a search for some mythical super-intelligent being – and worrying about the safety concerns that finding that mythical super-intelligent mechanical being will entail. This class of LLMs are tools capable of ‘understanding’ and, to some extent, reasoning in natural language fairly accurately. That’s their essence and that’s what makes them great. 
+                </p>
+                <p>
+                    If we start working on these practical narrow systems, I suspect we’ll quickly discover that 'AGI' has been with us all this time.
+                </p>
+                <h3>Footnotes:</h3>
+                <ol>
+                    <li id="footnote1">
+                        I only realised as I was writing this that the term “AGI” has some weird connotations signalling some god-being for what is essentially a set of tools that can augment human productivity. (On this, I’m very much in alignment with <a href="https://a16z.com/ai-will-save-the-world/">Marc Andreessen.</a>). If you notice any reticence on my part to state the term AGI explicitly, this is probably the reason. <a href = "#tag1">↩</a>
+                    </li>
+                </ol>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

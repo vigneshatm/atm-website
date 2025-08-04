@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding on the Relative Intractability of Interleague Performance Projections - Vignesh Annur Thiru Murthy</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: white;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            width: 95%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 2px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        nav header h1 {
+            line-height: 1.35;
+        }
+
+
+        nav {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-top: -6px;
+        }
+
+        nav ul li a {
+            display: inline-block; 
+            padding: 5px 5px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #eee;
+        }
+
+        .blog-content {
+            padding-top: 10px;
+        }
+
+        .blog-content > header > h2 {
+            font-size: 1.8em;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            line-height: 1.35;
+        }
+
+        .blog-content h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .blog-content p {
+            margin-bottom: 10px;
+        }
+
+        .back-button-phone {
+            color: #777;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .blog-date {
+            font-size: 0.85em;
+            color: #777;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .blog-content ul li {
+            margin: 2px;
+        }
+
+        .blog-content ol li{
+            margin: 2px;
+        }
+
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            body {
+                align-items: flex-start; 
+            }
+
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                width: 200px;
+                margin-bottom: 0;
+                padding-right: 20px;
+                text-align: left;
+            }
+
+            header {
+                text-align: left;
+                padding-bottom: 0px;
+            }
+
+            .blog-content {
+                flex: 1;
+                padding-top: 0;
+                padding-left: 20px;
+            }
+
+            .blog-date {
+                text-align: left;
+                padding-bottom: 10px;
+            }
+
+            .back-button-phone {
+                display: none;
+            }
+        }
+
+        /* Media query for smaller screens (mobile & tablets) */
+        @media (max-width: 767px) {
+            nav {
+                display: none;
+            }
+
+            .container {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            header {
+                padding-bottom: 10px;
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <header>
+                <a href="../index.html"><h1>Vignesh Annur Thiru Murthy</h1>
+                </a>
+            </header>
+            <ul>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../writing.html">Writing</a></li>
+                <li><a href="../bookshelf.html">Bookshelf</a></li>
+                <li><a href="../quotes.html">Quotes</a></li>
+                <li><a href="../quotes.html">Compendia</a></li>
+                <li><a href="https://www.twitter.com/sportquant" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
+
+        <main class="blog-content">
+            <header>
+                <p class="back-button-phone"><a href=javascript:history.back()>← Back</a></p>
+                <h2>Expanding on the Relative Intractability of Interleague Performance Projections</h2>
+                <p class="blog-date">Published on November 28, 2023</p>
+            </header>
+
+            <section>
+                <p>
+                    A running theme throughout all the various soccer-related posts on this site is my rant on the foibles of predicting the performance of interleague transfers. (Interleague transfers are, simply, where the buying and selling teams play in different leagues.) I usually gloss over explaining why it is so in those rants, primarily because it is peripheral to the narrative in consideration but also because the details are tedious and deserving of their own post. (I’m also not willing to squander a perfectly good post in the footnotes of another <i>just yet</i>.)  
+                </p>
+                <p>
+                    Firstly, I should take some time to clarify and expand upon the point of contention. Different soccer leagues differ markedly across multiple vectors, most notably the playing styles of the teams that constitute them and the quality and age curves of the players that make up the teams. These are the differences that separate (say) the Premier League from (again, without loss of generality) the Eredivisie or, for that matter, the <a href="https://www.premierleague.com/premier-league-2-explained" target="_blank">Premier League 2</a>. Player performance in one league is not entirely replicable in the other for the same reasons as mentioned above, and in the same way player performance in the FBS isn’t replicable in the NFL. Explicitly or implicitly resolving this dilemma is paramount to the $x0 million considerations that are transfers, <a>most of which clubs must get right to maintain (and improve) competitiveness</a>. 
+                </p>
+                <p>
+                    Projecting the performance of interleague transfers is a somewhat crucial consideration for betting companies too, as pricing the impact of transfers fairly accurately is important at varying degrees for most props on offer. However, they have ways of mitigating and porting risk that is not true in the case of clubs, whose decisions can’t quite be hedged and where feedback loops are intensely sharp and quick. (This essay will only explore interleague transfers from the perspective of clubs.)
+                </p>
+                <p>
+                    In practice, not <i>all</i> interleague transfers carry with them exceptional uncertainty. Some leagues have enough cross-pollination between them, with players moving across the aisle and/or the constituent teams playing between each other often enough that it isn’t too hard to gauge, with varying degrees of confidence, the change in a player’s output.
+                </p>
+                <p>
+                    For instance, transfers between players in the top five male leagues (across all directions) happen often enough that it’s trivial for clubs in each of those leagues to spot the best performers in the other four and apply some constant to predict future output in an ideal scenario. Some methodologies that attempt to determine those transformation constants are linked <a href="https://thecomeonman.github.io/PredictingTransferSuccesses/" target="_blank">here</a> and <a href="https://tonyelhabr.rbind.io/posts/soccer-league-strength/" target="_blank">here</a>.
+                </p>
+                <img src="../Media/graph_viz_4513451345-1.png">
+                <p>
+                    There are some caveats:
+                </p>
+                <ul>
+                    <li>
+                        A player’s output in a new team depends, to a great extent, on how good the buying team is and <i>how stable the organization is</i>. Liverpool can rely on model outputs more than, say, Manchester United can, and most randomly chosen players will have greater success at Liverpool than at Manchester United, were they to have a choice between the clubs. The reason is partly simple: Liverpool has better players and is a better-coached team, which helps the new signing perform better. But there are also some less obvious reasons: better organizations help players relocate better, which is known to improve transfer outcomes. They are also more likely to sign players that fit the manager’s system and probably have fallback protocols that prevent transfers from going messy.<sup id="tag1"><a href="#footnote1">[1]</a></sup>
+                    </li>
+                    <li>
+                        The historic samples whose NPV/VAEP scores are post hoc analyzed to yield the transformation constant are not truly randomly chosen. The best players from leagues of perceived lower quality are overwhelmingly more likely to move to the better teams and leagues, and the constants are representative of <i>their</i> performances. Clubs, as such, must exercise caution against updating uniformly across all players in any given competition.
+                    </li>
+                    <li>
+                        This follows from the above, but players whose performances stand out very obviously and who are from leagues whose quality is well-understood are almost always valued very accurately, which puts those players out of reach for clubs with smaller budgets looking to improve relative competitiveness. Those clubs’ search processes then expand outward into leagues whose quality is more uncertain, and into players whose performances are not entirely striking from the numbers. This, naturally, decreases success rates for the group.<sup id="tag2"><a href="#footnote2">[2]</a></sup>
+                    </li>
+                </ul>
+                <p>
+                    Attempts to address these drawbacks, especially the projection issues related to the first point, have involved <a href="https://arxiv.org/pdf/2201.11533.pdf" target="_blank">using Elo ratings</a> to more accurately reflect the impact of team quality on performance. While certainly an improvement, they run into some well-known issues that deal with the inherent nature of Elo as an accurate representation of relative team quality. For one, there are usually only three major competitive fixtures between teams from different continents in an entire calendar year, which makes those intercontinental differences very hard to quantify. The same issue exists, although less pertinent, between leagues from the same continent whose teams don’t play each other often. Rapid shifts in club performances over extremely short periods – which happens more often than you might think – can also cause projection errors.<sup id="tag3"><a href="#footnote3">[3]</a></sup> While self-correcting over enough time, it might not correct in time for transfers where evaluation timelines are short.
+                </p>
+                <p>
+                    To conclude, I’ll reiterate that projection is puzzling, which makes interleague transfers, by association, onerous. The most fiscally dominant clubs can pay for the best players with the most striking performance numbers in similar leagues and can be confident in their projections. For others, the confidence level should trend lower with obscurity. Proceed with caution.
+                </p>
+            </section>
+            <section>
+                <h2>Footnotes:</h2>
+                <ol>
+                    <li>
+                        <p>
+                            Note that we are talking about randomly selected players here. The fact is Liverpool, in recent years, has been much better at scouting and talent identification than Manchester United. United, though, still overpay for good (and ‘proven’) players — who still don’t perform all that great, which is a product of all the other factors they aren’t good at.
+                        </p>
+                        <p>
+                            Ian Graham, the former Liverpool FC Director of Research, had a neat heuristic that listed the six ways a transfer can go wrong: 
+                        </p>
+                        <ul>
+                            <li>
+                                The player isn’t good enough, 
+                            </li>
+                            <li>
+                                Has pertinent injury/personal issues,
+                            </li>
+                            <li>
+                                The manager doesn’t like the player,
+                            </li>
+                            <li>
+                                Played out of position, 
+                            </li>
+                            <li>
+                                A player on the current roster is better,
+                            </li>
+                            <li>
+                                Doesn’t fit the system.
+                            </li>
+                        </ul>
+                        <p>
+                            Only the first relates <i>entirely</i> to scouting. Preventing the other causes, at least partly, depends on having a highly functional organization.
+                        </p>
+                    </li>
+                    <li>
+                        Individual clubs can still be successful here, but for a group of players, the more uncertain the value, the greater the risk of failure — when compared to groups that can be projected confidently. I should probably write about how clubs can find deep value in the market. Right now, there are probably still very potent signings that a teetering Premier League team can make that involve little projection risk. That deserves an article of its own.
+                    </li>
+                    <li>
+                        <p>
+                            This footnote was added as an edit. <a href="https://youtu.be/LA9-V6_ZIUg?si=0WaM7l14H-1VqfmS&t=2229" target="_blank">Here's</a> a funny anecdote from Ted Knutson, CEO of Statsbomb, at SSAC 2019 explaining a weird quirk of scouting forwards from the Eredivisie: <i>“When guys perform well [in the Eredivisie], you really have to be careful about their age. A lot of them are playing against 18-22 year old centre backs, and they’re cutting through them partly because of their physical maturity, and much less so because of their ability. You put them in a league that’s physically stronger and has a more normal peak age curve and they flop. We see this again and again.”</i>
+                        </p>
+                        <p>
+                            Presumably, this is a common occurrence with the Eredivisie, and if so, it should be reflected in both the league’s and its teams’ Elos and the output of the players transferring out. You can, however, imagine a whole bunch of leagues and (unlucky) evaluation timelines where this isn’t the case.
+                        </p>
+                    </li>
+                </ol>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

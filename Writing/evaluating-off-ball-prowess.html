@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluating Off-Ball Prowess - Vignesh Annur Thiru Murthy</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: white;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            width: 95%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 2px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        nav header h1 {
+            line-height: 1.35;
+        }
+
+
+        nav {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-top: -6px;
+        }
+
+        nav ul li a {
+            display: inline-block; 
+            padding: 5px 5px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #eee;
+        }
+
+        .blog-content {
+            padding-top: 10px;
+        }
+
+        .blog-content > header > h2 {
+            font-size: 1.8em;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            line-height: 1.35;
+        }
+
+        .blog-content h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .blog-content p {
+            margin-bottom: 10px;
+        }
+
+        .back-button-phone {
+            color: #777;
+        }
+
+        .blog-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .blog-date {
+            font-size: 0.85em;
+            color: #777;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .blog-content ul li {
+            margin: 2px;
+        }
+
+        .blog-content ol li{
+            margin: 2px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                align-items: flex-start; 
+            }
+
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 90%;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                width: 200px;
+                margin-bottom: 0;
+                padding-right: 20px;
+                text-align: left;
+            }
+
+            header {
+                text-align: left;
+                padding-bottom: 0px;
+            }
+
+            .blog-content {
+                flex: 1;
+                padding-top: 0;
+                padding-left: 20px;
+            }
+
+            .blog-date {
+                text-align: left;
+                padding-bottom: 10px;
+            }
+
+            .back-button-phone {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                display: none;
+            }
+
+            .container {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            header {
+                padding-bottom: 10px;
+                padding-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <header>
+                <a href="../index.html"><h1>Vignesh Annur Thiru Murthy</h1>
+                </a>
+            </header>
+            <ul>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../writing.html">Writing</a></li>
+                <li><a href="../bookshelf.html">Bookshelf</a></li>
+                <li><a href="../quotes.html">Quotes</a></li>
+                <li><a href="../quotes.html">Compendia</a></li>
+                <li><a href="https://www.twitter.com/sportquant" target="_blank">Twitter</a></li>
+            </ul>
+        </nav>
+
+        <main class="blog-content">
+            <header>
+                <p class="back-button-phone"><a href=javascript:history.back()>← Back</a></p>
+                <h2>Evaluating Off-Ball Prowess</h2>
+                <p class="blog-date">Published on November 17, 2023</p>
+            </header>
+
+            <section>
+                <p>
+                    A question stumped me on a call recently. It went, more or less,<i>‘Well, we have all these metrics for evaluating a player’s on-ball actions. But that’s only a little of what they do in the game. How do we evaluate them when they don’t have possession of the ball?’</i>
+                </p>
+                <p>
+                    I have heard this question (and many other versions of it) asked before, and I was pretty aware of the answer – with which I responded hopefully satisfactorily. The implicit assumption embedded in the question – that off-ball events matter a great ton to teams – still threw me off a little because off-ball actions aren’t a crucial consideration for most predictive analytics applications done outside the realms of clubs (which is the predictive analytics I’m most familiar with).
+                </p>
+                <p>
+                    On-ball events seem to matter a lot more than off-ball actions in the grand scheme of things, but if you’re a club, you really want to guard against signing slouches (and players bad at off-ball events that are crucial to winning games, à la defending). So how do you evaluate players’ prowess in those situations?
+                </p>
+                <p>
+                    Assuming we want to evaluate the relative propensity of players to “work hard” (for instance, press) off the ball and not their mental acuity in those situations (in that same instance, pressing well in football is something that requires a great deal of willingness, and comparatively very little ‘skill’), some useful metrics seem to be as follows:
+                </p>
+                <ul>
+                    <li>
+                        Duel win % – the percentage of aerial and ground “duels” won by the player under evaluation.
+                    </li>
+                    <li>
+                        High-intensity sprints and distance covered per game (absolute and percentile measures): these can be determined from optical and broadcast tracking data, and they provide some context into a player’s work rate, in addition to being a gauge for evaluating injury and fitness history.
+                    </li>
+                    <li>
+                        Tackled/dribbled past % – Measures the % of one-on-one confrontations in which the defender tackles the attacker and retrieves possession of the ball.
+                    </li>
+                    <li>
+                        Possession-adjusted pressures – Measures the number of pressures (entering the five-yard radius of the player in possession of the ball) recorded by a player for every 100 opposition possessions (so players in high-possession teams aren’t adversely affected).
+                    </li>
+                </ul>
+                <p>
+                    For position groups like centre-backs, evaluating defensive prowess (a crucial off-ball measure) still requires a great deal of qualitative analysis. Most defensive actions involve solving problems before they arise through, say, good positioning, and that’s something current methods still struggle with. I’ve <a href="https://vimeo.com/728162076" target="_blank">seen</a> <a href="https://vimeo.com/534338154" target="_blank">multiple</a> <a href="https://vimeo.com/533973203" target="_blank">papers</a> that attack this, but they still seem to be active research at this point. Statsbomb: <a href="https://statsbomb.com/articles/soccer/new-statsbomb-radars-2023-update/" target="_blank">’The message still remains: use caution when evaluating centre backs with data.’</a> Saying all that, some metrics are still decent barometers and remain of importance, most notably aerial duel win % (Statsbomb’s <a href="https://statsbomb.com/articles/soccer/introducing-hops-a-new-way-to-evaluate-heading-ability/" target="_blank">HOPS</a> is a nice advanced measure), top sprint speed (from broadcast/optical tracking), Possession Value Added, acceleration over arbitrary distances, height, and duel win %.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
